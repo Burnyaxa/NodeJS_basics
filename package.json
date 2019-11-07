@@ -4,7 +4,11 @@
   "description": "NodeJS basics",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "mocha \"./{,!(node_modules)/**/}*.js\"",
+    "precommit": "npm run prettier",
+    "prettier": "prettier --config .prettierrc.json --write *.js",
+    "prepush": "call npm run prettier && call npm run test"
   },
   "repository": {
     "type": "git",
