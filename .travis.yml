@@ -3,6 +3,5 @@ node_js:
  - node
 script:
  - npm run prettier
- - npm run test
 notifications:
  email: false
